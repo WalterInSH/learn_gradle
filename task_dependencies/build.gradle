@@ -1,0 +1,8 @@
+//To add a dependency, the corresponding task does not need to exist.
+//Acturally, you can define task intro before task hello
+task hello << {
+    println 'Hello world!'
+}
+task intro(dependsOn: hello) << {
+    println "I'm Gradle"
+}

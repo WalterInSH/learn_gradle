@@ -1,0 +1,11 @@
+//Full gradle task api http://gradle.org/docs/current/dsl/org.gradle.api.Task.html
+//For instance, "dependsOn" & "doLast" are apis supplied by gradle
+4.times { counter ->
+    task "task$counter" << {
+        println "I'm task number $counter"
+    }
+}
+task0.dependsOn task2, task3
+task2.doLast{
+    println 'task 2 does something else'
+}

@@ -1,0 +1,12 @@
+//For further info about extra task, see https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:extra_properties
+
+task myTask {
+    //declare a property
+    ext.myProperty = "myValue"
+}
+
+task printTaskProperties << {
+    //read the property
+    println myTask.myProperty
+}
+
